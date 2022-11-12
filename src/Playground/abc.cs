@@ -1,15 +1,14 @@
-﻿namespace Playground
-{
-    public class Abc
-    {
-        protected string xyz;
-    }
+﻿namespace Playground;
 
-    public class Mno : Abc
+public class Abc
+{
+    protected string xyz;
+}
+
+public class Mno : Abc
+{
+    public Mno()
     {
-        public Mno()
-        {
-            xyz = "";
-        }
+        xyz = "";
     }
 }
