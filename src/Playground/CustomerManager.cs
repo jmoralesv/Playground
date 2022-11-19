@@ -4,7 +4,7 @@ namespace Playground;
 
 public class CustomerManager
 {
-    private ArrayList customers = new ArrayList();
+    private readonly ArrayList customers = new();
 
     public void AddCustomer(Customer c)
     {
@@ -25,9 +25,7 @@ public class CustomerManager
 
         for (int i = 0; i < customers.Count; i++)
         {
-            Customer customer = (Customer)customers[i];
-
-            if (customer.id == id)
+            if (customers[i] is Customer customer && customer.id == id)
             {
                 index = i;
                 break;

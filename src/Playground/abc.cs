@@ -2,13 +2,13 @@
 
 public class Abc
 {
-    protected string xyz;
+    protected string? xyz;
 }
 
 public class Mno : Abc
 {
     public Mno()
     {
-        xyz = "";
+        xyz = string.Empty;
     }
 }
