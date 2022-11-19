@@ -134,12 +134,6 @@ namespace Flappy_Bird
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Can");
-        }
-
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
