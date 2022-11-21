@@ -138,6 +138,8 @@ namespace HowFastDoYouType
         }
         public void GameOver()
         {
+            correctWords = 0;
+            wrongWords = 0;
             check = false;
             lblResult.Text = WPMCalculator().ToString() + " WPM";
             lblCorrectWordsCount.Text = correctWords.ToString();
