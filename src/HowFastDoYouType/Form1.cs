@@ -18,7 +18,7 @@ namespace HowFastDoYouType
         private readonly List<Label> labelList = new List<Label>();
         private readonly Random randomNumber = new Random();
         private readonly string filePath = @"C:\200Words\200Words.txt";
-
+        private bool check = true;
         //adding all the labels to labelList
         public void SetList()
         {
@@ -105,8 +105,10 @@ namespace HowFastDoYouType
         public void StartCountDown()
         {
 
-
+            if(check)
+            {
             countDownTimer.Start();
+            }
 
         }
         private void textBoxKeyPress(object sender, KeyPressEventArgs e)
@@ -136,6 +138,7 @@ namespace HowFastDoYouType
         }
         public void GameOver()
         {
+            check = false;
             lblResult.Text = WPMCalculator().ToString() + " WPM";
             lblCorrectWordsCount.Text = correctWords.ToString();
             lblWrongWordsCount.Text = wrongWords.ToString();
@@ -145,7 +148,7 @@ namespace HowFastDoYouType
 
         public void Restart()
         {
-
+            check = true;
             countDownTimer.Stop();
             labelPanel.Show();
             lblCorrectWordsCount.Text = "0";
