@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PongGame
@@ -18,6 +12,7 @@ namespace PongGame
         int racketSpeed = 10;
         int r, g, b; //random background color
         Random random = new Random(); // creating an object from random class
+        
         public Form1()
         {
             InitializeComponent();
@@ -25,8 +20,8 @@ namespace PongGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ball.Location = new Point(random.Next(12,772), 
-                random.Next(12,120));
+            ball.Location = new Point(random.Next(12, 772),
+                random.Next(12, 120));
 
             gameOverPanel.Hide();
         }
@@ -50,11 +45,11 @@ namespace PongGame
             {
                 racket.Left -= racketSpeed;
             }
-            if(e.KeyCode == Keys.D)
+            if (e.KeyCode == Keys.D)
             {
                 racket.Left += racketSpeed;
             }
-            if(e.KeyCode == Keys.F2)
+            if (e.KeyCode == Keys.F2)
             {
                 Restart();
             }
@@ -74,7 +69,7 @@ namespace PongGame
 
         private void BallMechanics() // changing ball direction and speed on x axis
         {
-            if(ball.Left <= 0 || ball.Left >= area.Right - 13)
+            if (ball.Left <= 0 || ball.Left >= area.Right - 13)
             {
                 if (ballSpeedX < 0)
                 {
@@ -111,7 +106,7 @@ namespace PongGame
                 score++;
             }
 
-            if(ball.Top <= 0)
+            if (ball.Top <= 0)
             {
                 if (ballSpeedY < 0)
                 {
@@ -129,7 +124,7 @@ namespace PongGame
 
         private void GameOver() // game over function
         {
-            if(ball.Bottom >550)
+            if (ball.Bottom > 550)
             {
 
                 labelScore2.Text = "Score: " + score.ToString();
@@ -150,7 +145,7 @@ namespace PongGame
             ballSpeedY = 10;
             ballSpeedX = 10;
             racketSpeed = 10;
-            ball.Location = new Point(random.Next(12, 772), 
+            ball.Location = new Point(random.Next(12, 772),
                 random.Next(12, 120));
 
             racket.Location = new Point(300, 400);
