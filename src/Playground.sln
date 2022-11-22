@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flappy Bird", "Flappy Bird\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowFastDoYouType", "HowFastDoYouType\HowFastDoYouType.csproj", "{5B912711-480E-4E7B-A639-306C288CA7DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PongGame", "PongGame\PongGame.csproj", "{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{5B912711-480E-4E7B-A639-306C288CA7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B912711-480E-4E7B-A639-306C288CA7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B912711-480E-4E7B-A639-306C288CA7DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
