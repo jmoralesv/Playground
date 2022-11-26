@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowFastDoYouType", "HowFast
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PongGame", "PongGame\PongGame.csproj", "{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tic Tac Toe!", "Tic Tac Toe\Tic Tac Toe!.csproj", "{7151D5A5-6C30-45C9-B30D-DCAFC22AEE68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7151D5A5-6C30-45C9-B30D-DCAFC22AEE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7151D5A5-6C30-45C9-B30D-DCAFC22AEE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7151D5A5-6C30-45C9-B30D-DCAFC22AEE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7151D5A5-6C30-45C9-B30D-DCAFC22AEE68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,31 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tic_Tac_Toe_
 {
     public partial class Form1 : Form
     {
-
-
         bool turn = true; //true == X turn // false == O turn
         bool isThereAWinner = false; //checks if theres a winner
         bool disableAI = true; // i forgot why i put this lmao but i guess it was necessary o-o
-        List<Button> buttonList = new List<Button>();
-        Random random = new Random();   
+        readonly List<Button> buttonList = new List<Button>();
+        readonly Random random = new Random();
+
         public Form1()
         {
             InitializeComponent();
-
         }
-        
+
         private void Form1_Load(object sender, EventArgs e) //adding buttons to the list and automatically choosing play-friend mode unless you change
         {
             buttonList.Add(A1); buttonList.Add(A2); buttonList.Add(A3);
@@ -33,8 +25,6 @@ namespace Tic_Tac_Toe_
             buttonList.Add(C1); buttonList.Add(C2); buttonList.Add(C3);
 
             buttonPlayFriend.Checked = true;
-
-
         }
 
         private void ButtonClicked(object sender, EventArgs e) //controls what happens if any of the main 9 buttons are clicked
@@ -50,14 +40,14 @@ namespace Tic_Tac_Toe_
                     turn = !turn;
                     btn.Enabled = false;
                 }
-                else if(!turn && buttonPlayFriend.Checked)
+                else if (!turn && buttonPlayFriend.Checked)
                 {
                     btn.Text = "O";
                     btn.BackColor = Color.Orange;
                     turn = !turn;
                     btn.Enabled = false;
                 }
-                
+
             }
             ChangeLabel();
             WinGame();
@@ -65,6 +55,7 @@ namespace Tic_Tac_Toe_
             AITurn();
 
         }
+        
         private void AITurn() // controls what ai does. only activates when you choose PlayAI
         {
             if (!turn && buttonPlayAI.Checked && disableAI)
@@ -85,11 +76,12 @@ namespace Tic_Tac_Toe_
             }
 
         }
+        
         private void Restart() // restart game function
         {
             labelTurn.Text = "X";
             turn = true;
-            isThereAWinner =false;
+            isThereAWinner = false;
             foreach (var button in buttonList)
             {
                 button.Text = "";
@@ -106,7 +98,7 @@ namespace Tic_Tac_Toe_
                 disableAI = false;
                 isThereAWinner = true;
             }
-            if(B1.Text == B2.Text && B2.Text == B3.Text && B1.Text != "")
+            if (B1.Text == B2.Text && B2.Text == B3.Text && B1.Text != "")
             {
                 disableAI = false;
                 isThereAWinner = true;
@@ -119,7 +111,7 @@ namespace Tic_Tac_Toe_
 
             //diagonal winner check
 
-            if(A1.Text == B2.Text && B2.Text == C3.Text && A1.Text != "")
+            if (A1.Text == B2.Text && B2.Text == C3.Text && A1.Text != "")
             {
                 disableAI = false;
                 isThereAWinner = true;
@@ -130,10 +122,10 @@ namespace Tic_Tac_Toe_
                 isThereAWinner = true;
             }
             //vertical winner check
-            if(A1.Text == B1.Text && B1.Text == C1.Text && A1.Text != "")
+            if (A1.Text == B1.Text && B1.Text == C1.Text && A1.Text != "")
             {
                 disableAI = false;
-                isThereAWinner =true;
+                isThereAWinner = true;
             }
             if (A2.Text == B2.Text && B2.Text == C2.Text && A2.Text != "")
             {
@@ -148,7 +140,7 @@ namespace Tic_Tac_Toe_
 
             if (isThereAWinner)
             {
-                if(!turn && buttonPlayFriend.Checked)
+                if (!turn && buttonPlayFriend.Checked)
                 {
                     MessageBox.Show("X won the game!");
                 }
@@ -173,11 +165,11 @@ namespace Tic_Tac_Toe_
             int DisabledButtonCount = 0;
             foreach (var button in buttonList)
             {
-                if(button.Enabled == false)
+                if (button.Enabled == false)
                 {
                     DisabledButtonCount++;
                 }
-                if(DisabledButtonCount == 9 && !isThereAWinner)
+                if (DisabledButtonCount == 9 && !isThereAWinner)
                 {
                     disableAI = false;
                     MessageBox.Show("Draw!");
@@ -185,6 +177,7 @@ namespace Tic_Tac_Toe_
                 }
             }
         }
+        
         private void buttonRestart_Click(object sender, EventArgs e) //restart button click method
         {
             Restart();
@@ -192,12 +185,12 @@ namespace Tic_Tac_Toe_
 
         private void ChangeLabel() //changes label to show whose turn it is. it's disabled when you're playing against ai
         {
-            if (turn && !buttonPlayAI.Checked) 
+            if (turn && !buttonPlayAI.Checked)
             {
                 labelTurn.Show();
                 labelTurn.Text = "X";
             }
-            else if(!turn && !buttonPlayAI.Checked)
+            else if (!turn && !buttonPlayAI.Checked)
             {
                 labelTurn.Show();
                 labelTurn.Text = "O";
@@ -207,7 +200,5 @@ namespace Tic_Tac_Toe_
                 labelTurn.Hide();
             }
         }
-
-        
     }
 }
