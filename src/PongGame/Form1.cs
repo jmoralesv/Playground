@@ -11,8 +11,8 @@ namespace PongGame
         int ballSpeedX = 10;
         int racketSpeed = 10;
         int r, g, b; //random background color
-        Random random = new Random(); // creating an object from random class
-        
+        readonly Random random = new Random(); // creating an object from random class
+
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +36,6 @@ namespace PongGame
             RacketOutScreen();
             GameOver();
         }
-
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)  //Racket Controls
         {
@@ -139,7 +138,6 @@ namespace PongGame
 
         private void Restart()
         {
-
             gameOverPanel.Hide();
             score = 0;
             ballSpeedY = 10;

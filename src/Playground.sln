@@ -18,7 +18,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flappy Bird", "Flappy Bird\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HowFastDoYouType", "HowFastDoYouType\HowFastDoYouType.csproj", "{5B912711-480E-4E7B-A639-306C288CA7DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PongGame", "PongGame\PongGame.csproj", "{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PongGame", "PongGame\PongGame.csproj", "{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tic Tac Toe!", "Tic Tac Toe\Tic Tac Toe!.csproj", "{7151D5A5-6C30-45C9-B30D-DCAFC22AEE68}"
 EndProject
