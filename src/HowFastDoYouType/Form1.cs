@@ -17,7 +17,7 @@ namespace HowFastDoYouType
         private readonly int secondsCalculate = 60;
         private readonly List<Label> labelList = new List<Label>();
         private readonly Random randomNumber = new Random();
-        private readonly string filePath = @"C:\200Words\200Words.txt";
+        private readonly string filePath = "200Words.txt";
         private bool check = true;
         //adding all the labels to labelList
         public void SetList()
@@ -46,7 +46,7 @@ namespace HowFastDoYouType
                 item.Text = Words[randomNumber.Next(0, 200)];
             }
         }
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -105,9 +105,9 @@ namespace HowFastDoYouType
         public void StartCountDown()
         {
 
-            if(check)
+            if (check)
             {
-            countDownTimer.Start();
+                countDownTimer.Start();
             }
 
         }
