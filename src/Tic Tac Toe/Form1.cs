@@ -30,7 +30,7 @@ namespace Tic_Tac_Toe_
         private void ButtonClicked(object sender, EventArgs e) //controls what happens if any of the main 9 buttons are clicked
         {
             disableAI = true;
-            Button btn = (Button)sender; // i still need to practice with "sender", still couldnt figure out what it actually does
+            Button btn = (Button)sender; // i still need to practice with "sender", still couldn't figure out what it actually does
             if (!isThereAWinner)
             {
                 if (turn)
@@ -53,9 +53,8 @@ namespace Tic_Tac_Toe_
             WinGame();
             Draw();
             AITurn();
-
         }
-        
+
         private void AITurn() // controls what ai does. only activates when you choose PlayAI
         {
             if (!turn && buttonPlayAI.Checked && disableAI)
@@ -76,7 +75,7 @@ namespace Tic_Tac_Toe_
             }
 
         }
-        
+
         private void Restart() // restart game function
         {
             labelTurn.Text = "X";
@@ -142,19 +141,19 @@ namespace Tic_Tac_Toe_
             {
                 if (!turn && buttonPlayFriend.Checked)
                 {
-                    MessageBox.Show("X won the game!");
+                    MessageBox.Show("X won the game!", "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (isThereAWinner && turn && buttonPlayFriend.Checked)
                 {
-                    MessageBox.Show("O won the game!");
+                    MessageBox.Show("O won the game!", "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (isThereAWinner && !turn && buttonPlayAI.Checked)
                 {
-                    MessageBox.Show("You won the game!");
+                    MessageBox.Show("You won the game!", "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (isThereAWinner && turn && buttonPlayAI.Checked)
                 {
-                    MessageBox.Show("AI won the game!");
+                    MessageBox.Show("AI won the game!", "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 Restart();
             }
@@ -172,12 +171,12 @@ namespace Tic_Tac_Toe_
                 if (DisabledButtonCount == 9 && !isThereAWinner)
                 {
                     disableAI = false;
-                    MessageBox.Show("Draw!");
+                    MessageBox.Show("Draw!", "Draw!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Restart();
                 }
             }
         }
-        
+
         private void buttonRestart_Click(object sender, EventArgs e) //restart button click method
         {
             Restart();

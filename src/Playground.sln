@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HowFastDoYouType", "HowFast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PongGame", "PongGame\PongGame.csproj", "{C5660204-60F7-4E9A-88AD-3F20FE9BE30C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tic Tac Toe!", "Tic Tac Toe\Tic Tac Toe!.csproj", "{7151D5A5-6C30-45C9-B30D-DCAFC22AEE68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tic Tac Toe!", "Tic Tac Toe\Tic Tac Toe!.csproj", "{7151D5A5-6C30-45C9-B30D-DCAFC22AEE68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
