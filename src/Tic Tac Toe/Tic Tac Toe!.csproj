@@ -4,7 +4,8 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Tic_Tac_Toe_</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+    <NoWarn>$(NoWarn);WFO5001</NoWarn>
   </PropertyGroup>
 </Project>

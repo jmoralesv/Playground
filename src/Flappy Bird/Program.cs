@@ -8,8 +8,14 @@ internal static class Program
     [STAThread]
     static void Main()
     {
-        Application.EnableVisualStyles();
-        Application.SetCompatibleTextRenderingDefault(false);
+        // To customize application configuration such as set high DPI settings or default font,
+        // see https://aka.ms/applicationconfiguration.
+        ApplicationConfiguration.Initialize();
+
+        // Set dark mode if the system is in dark mode
+        // This feature is experimental in .NET 9: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/whats-new/net90#dark-mode
+        Application.SetColorMode(SystemColorMode.Classic);
+
         Application.Run(new Entrance());
     }
 }
