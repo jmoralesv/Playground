@@ -127,7 +127,6 @@
             this.label1.Size = new System.Drawing.Size(87, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "consider";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label17
             // 
@@ -384,7 +383,6 @@
             this.lblAccuracyAmount.Size = new System.Drawing.Size(58, 22);
             this.lblAccuracyAmount.TabIndex = 2;
             this.lblAccuracyAmount.Text = "%100";
-            this.lblAccuracyAmount.Click += new System.EventHandler(this.lblCorrectWords_Click);
             // 
             // label19
             // 
@@ -396,7 +394,6 @@
             this.label19.Size = new System.Drawing.Size(113, 22);
             this.label19.TabIndex = 2;
             this.label19.Text = "Accuracy: ";
-            this.label19.Click += new System.EventHandler(this.lblCorrectWords_Click);
             // 
             // lblCorrectWordsCount
             // 
@@ -408,7 +405,6 @@
             this.lblCorrectWordsCount.Size = new System.Drawing.Size(17, 20);
             this.lblCorrectWordsCount.TabIndex = 2;
             this.lblCorrectWordsCount.Text = "0";
-            this.lblCorrectWordsCount.Click += new System.EventHandler(this.lblCorrectWords_Click);
             // 
             // lblCorrectWords
             // 
@@ -420,7 +416,6 @@
             this.lblCorrectWords.Size = new System.Drawing.Size(124, 20);
             this.lblCorrectWords.TabIndex = 2;
             this.lblCorrectWords.Text = "Correct Words: ";
-            this.lblCorrectWords.Click += new System.EventHandler(this.lblCorrectWords_Click);
             // 
             // label20
             // 
@@ -431,7 +426,6 @@
             this.label20.Size = new System.Drawing.Size(163, 13);
             this.label20.TabIndex = 1;
             this.label20.Text = "----------------------------------------------------";
-            this.label20.Click += new System.EventHandler(this.column_Click);
             // 
             // column
             // 
@@ -442,7 +436,6 @@
             this.column.Size = new System.Drawing.Size(163, 13);
             this.column.TabIndex = 1;
             this.column.Text = "----------------------------------------------------";
-            this.column.Click += new System.EventHandler(this.column_Click);
             // 
             // btnRestart
             // 
