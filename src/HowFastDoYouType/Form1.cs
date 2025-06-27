@@ -20,6 +20,7 @@ public partial class Form1 : Form
 
     private void Form1_Load(object sender, EventArgs e)
     {
+        Text = "How Fast Do You Type?";
         Words = File.ReadAllLines(FilePath);
         SetList();
         GetRandomWords();
