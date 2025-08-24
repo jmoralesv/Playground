@@ -1,11 +1,11 @@
 ﻿using Playground;
 
-internal class Program
+internal static class Program
 {
     private static void Main(string[] args)
     {
         Console.Title = "Playground";
-        
+
         Console.WriteLine("Hello, World!");
 
         DoCustomerManagement();
@@ -24,8 +24,8 @@ internal class Program
 
         manager.ShowCustomerNames();
 
-        manager.RemoveCustomer(customer1.id);
-        manager.RemoveCustomer(customer2.id);
+        manager.RemoveCustomer(customer1.Id);
+        manager.RemoveCustomer(customer2.Id);
 
         manager.ShowCustomerNames();
     }

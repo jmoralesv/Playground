@@ -2,16 +2,18 @@
 
 public partial class Form1 : Form
 {
-    readonly Entrance entrance = new();
-    readonly Random random = new();
+    private readonly Entrance entrance = new();
+    private readonly Random random = new();
+
     public Form1()
     {
         InitializeComponent();
     }
-    public int gravity;
-    public int pipeSpeed = Entrance.EntrancePipeSpeed;
-    public int score = 0;
-    public int pipeSpeedRate = Entrance.EntrancePipeRate;
+
+    private int gravity;
+    private int pipeSpeed = Entrance.EntrancePipeSpeed;
+    private int score;
+    private int pipeSpeedRate = Entrance.EntrancePipeRate;
 
     public void startGame()
     {

@@ -4,7 +4,7 @@ namespace Playground;
 
 public class CustomerManager
 {
-    private readonly ArrayList customers = new();
+    private readonly ArrayList customers = [];
 
     public void AddCustomer(Customer c)
     {
@@ -15,7 +15,7 @@ public class CustomerManager
     {
         foreach (Customer customer in customers)
         {
-            Console.WriteLine(customer.name);
+            Console.WriteLine(customer.Name);
         }
     }
 
@@ -25,14 +25,14 @@ public class CustomerManager
 
         for (int i = 0; i < customers.Count; i++)
         {
-            if (customers[i] is Customer customer && customer.id == id)
+            if (customers[i] is Customer customer && customer.Id == id)
             {
                 index = i;
                 break;
             }
         }
 
-        if(index != -1)
+        if (index != -1)
         {
             customers.RemoveAt(index);
             Console.WriteLine("Customer with id " + id + " was removed.");

@@ -1,17 +1,9 @@
 ﻿namespace Playground;
 
-public class Customer
+public class Customer(int id, string name, int age, string city)
 {
-    public int id;
-    public string name;
-    public int age;
-    public string city;
-
-    public Customer(int id, string name, int age, string city)
-    {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.city = city;
-    }
+    public int Id { get; set; } = id;
+    public string Name { get; set; } = name;
+    public int Age { get; set; } = age;
+    public string City { get; set; } = city;
 }

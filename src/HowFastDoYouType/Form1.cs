@@ -6,10 +6,10 @@ public partial class Form1 : Form
     private const string FilePath = "200Words.txt";
     private readonly List<Label> labelList = [];
     private readonly Random randomNumber = new();
-    private double correctWords = 0;
-    private double wrongWords = 0;
+    private double correctWords;
+    private double wrongWords;
     private int seconds = 60;
-    private int whichWord = 0;
+    private int whichWord;
     private bool check = true;
     private string[] Words = [];
 
@@ -55,7 +55,7 @@ public partial class Form1 : Form
     {
         var childrenControls = labelPanel.Controls
             .Cast<Control>()
-            .Select(x => new { Control = x, Index = int.Parse(x.Name.Replace("label", string.Empty)) })
+            .Select(x => new { Control = x, Index = int.Parse(x.Name.Replace("label", string.Empty, StringComparison.InvariantCultureIgnoreCase)) })
             .OrderBy(x => x.Index)
             .Select(x => x.Control)
             .ToList();

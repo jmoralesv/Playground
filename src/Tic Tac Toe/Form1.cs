@@ -3,9 +3,9 @@
 public partial class Form1 : Form
 {
     bool turn = true; //true == X turn // false == O turn
-    bool isThereAWinner = false; //checks if theres a winner
+    bool isThereAWinner; //checks if theres a winner
     bool disableAI = true; // i forgot why i put this lmao but i guess it was necessary o-o
-    readonly List<Button> buttonList = new();
+    readonly List<Button> buttonList = [];
     readonly Random random = new();
 
     public Form1()

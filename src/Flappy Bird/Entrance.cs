@@ -2,8 +2,8 @@
 
 public partial class Entrance : Form
 {
-    bool anyButtonClicked = false;
-    bool showOptions = false;
+    private bool anyButtonClicked;
+    private bool showOptions;
 
     public static int EntrancePipeSpeed { get; set; }
     public static int EntrancePipeRate { get; set; }
@@ -28,7 +28,7 @@ public partial class Entrance : Form
     }
     private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
     {
-        Form1 form = new();
+        using Form1 form = new();
         form.Show();
         this.Hide();
     }

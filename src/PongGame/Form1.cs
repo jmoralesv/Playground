@@ -2,7 +2,7 @@
 
 public partial class Form1 : Form
 {
-    int score = 0;
+    int score;
     int ballSpeedY = 10;
     int ballSpeedX = 10;
     int racketSpeed = 10;
