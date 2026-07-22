@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <!-- More info about central package management: https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management -->
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- No packages currently used by this solution. Add PackageVersion items here organized by project/category as needed. -->
+  </ItemGroup>
+</Project>
