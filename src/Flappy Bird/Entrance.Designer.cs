@@ -28,236 +28,238 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entrance));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bird = new System.Windows.Forms.PictureBox();
-            this.pipeup = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.options = new System.Windows.Forms.PictureBox();
-            this.panel_options = new System.Windows.Forms.Panel();
-            this.btn_medium = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_hard = new System.Windows.Forms.Label();
-            this.lbl_medium = new System.Windows.Forms.Label();
-            this.lbl_easy = new System.Windows.Forms.Label();
-            this.btn_hard = new System.Windows.Forms.Button();
-            this.btn_easy = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bird)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pipeup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.options)).BeginInit();
-            this.panel_options.SuspendLayout();
-            this.SuspendLayout();
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Entrance));
+            pictureBox1 = new PictureBox();
+            bird = new PictureBox();
+            pipeup = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            options = new PictureBox();
+            panel_options = new Panel();
+            btn_medium = new Button();
+            label1 = new Label();
+            lbl_hard = new Label();
+            lbl_medium = new Label();
+            lbl_easy = new Label();
+            btn_hard = new Button();
+            btn_easy = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bird).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pipeup).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)options).BeginInit();
+            panel_options.SuspendLayout();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(86, 72);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(100, 83);
+            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(212, 190);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            pictureBox1.MouseClick += pictureBox1_MouseClick;
             // 
             // bird
             // 
-            this.bird.Image = ((System.Drawing.Image)(resources.GetObject("bird.Image")));
-            this.bird.Location = new System.Drawing.Point(131, 37);
-            this.bird.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bird.Name = "bird";
-            this.bird.Size = new System.Drawing.Size(82, 77);
-            this.bird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bird.TabIndex = 7;
-            this.bird.TabStop = false;
+            bird.Image = (Image)resources.GetObject("bird.Image");
+            bird.Location = new Point(153, 43);
+            bird.Margin = new Padding(2);
+            bird.Name = "bird";
+            bird.Size = new Size(96, 89);
+            bird.SizeMode = PictureBoxSizeMode.StretchImage;
+            bird.TabIndex = 7;
+            bird.TabStop = false;
             // 
             // pipeup
             // 
-            this.pipeup.Image = ((System.Drawing.Image)(resources.GetObject("pipeup.Image")));
-            this.pipeup.Location = new System.Drawing.Point(9, 367);
-            this.pipeup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pipeup.Name = "pipeup";
-            this.pipeup.Size = new System.Drawing.Size(53, 240);
-            this.pipeup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pipeup.TabIndex = 8;
-            this.pipeup.TabStop = false;
+            pipeup.Image = (Image)resources.GetObject("pipeup.Image");
+            pipeup.Location = new Point(10, 423);
+            pipeup.Margin = new Padding(2);
+            pipeup.Name = "pipeup";
+            pipeup.Size = new Size(62, 277);
+            pipeup.SizeMode = PictureBoxSizeMode.StretchImage;
+            pipeup.TabIndex = 8;
+            pipeup.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(272, 367);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 240);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(317, 423);
+            pictureBox2.Margin = new Padding(2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(62, 277);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(67, 367);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(53, 240);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(78, 423);
+            pictureBox3.Margin = new Padding(2);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(62, 277);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 8;
+            pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(214, 367);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(53, 240);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox2_Click);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(250, 423);
+            pictureBox4.Margin = new Padding(2);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(62, 277);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 8;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox2_Click;
             // 
             // options
             // 
-            this.options.Image = ((System.Drawing.Image)(resources.GetObject("options.Image")));
-            this.options.Location = new System.Drawing.Point(93, 193);
-            this.options.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.options.Name = "options";
-            this.options.Size = new System.Drawing.Size(175, 91);
-            this.options.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.options.TabIndex = 9;
-            this.options.TabStop = false;
-            this.options.Click += new System.EventHandler(this.pictureBox5_Click);
+            options.Image = (Image)resources.GetObject("options.Image");
+            options.Location = new Point(108, 223);
+            options.Margin = new Padding(2);
+            options.Name = "options";
+            options.Size = new Size(204, 105);
+            options.SizeMode = PictureBoxSizeMode.StretchImage;
+            options.TabIndex = 9;
+            options.TabStop = false;
+            options.Click += pictureBox5_Click;
             // 
             // panel_options
             // 
-            this.panel_options.BackColor = System.Drawing.Color.IndianRed;
-            this.panel_options.Controls.Add(this.btn_medium);
-            this.panel_options.Controls.Add(this.label1);
-            this.panel_options.Controls.Add(this.lbl_hard);
-            this.panel_options.Controls.Add(this.lbl_medium);
-            this.panel_options.Controls.Add(this.lbl_easy);
-            this.panel_options.Controls.Add(this.btn_hard);
-            this.panel_options.Controls.Add(this.btn_easy);
-            this.panel_options.Location = new System.Drawing.Point(9, 46);
-            this.panel_options.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel_options.Name = "panel_options";
-            this.panel_options.Size = new System.Drawing.Size(315, 345);
-            this.panel_options.TabIndex = 10;
+            panel_options.BackColor = Color.IndianRed;
+            panel_options.Controls.Add(btn_medium);
+            panel_options.Controls.Add(label1);
+            panel_options.Controls.Add(lbl_hard);
+            panel_options.Controls.Add(lbl_medium);
+            panel_options.Controls.Add(lbl_easy);
+            panel_options.Controls.Add(btn_hard);
+            panel_options.Controls.Add(btn_easy);
+            panel_options.Location = new Point(10, 53);
+            panel_options.Margin = new Padding(2);
+            panel_options.Name = "panel_options";
+            panel_options.Size = new Size(368, 398);
+            panel_options.TabIndex = 10;
             // 
             // btn_medium
             // 
-            this.btn_medium.Location = new System.Drawing.Point(89, 115);
-            this.btn_medium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_medium.Name = "btn_medium";
-            this.btn_medium.Size = new System.Drawing.Size(115, 67);
-            this.btn_medium.TabIndex = 11;
-            this.btn_medium.Text = "Medium";
-            this.btn_medium.UseVisualStyleBackColor = true;
-            this.btn_medium.Click += new System.EventHandler(this.btn_medium_Click);
+            btn_medium.Location = new Point(104, 133);
+            btn_medium.Margin = new Padding(2);
+            btn_medium.Name = "btn_medium";
+            btn_medium.Size = new Size(134, 77);
+            btn_medium.TabIndex = 11;
+            btn_medium.Text = "Medium";
+            btn_medium.UseVisualStyleBackColor = true;
+            btn_medium.Click += btn_medium_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(11, 222);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 10;
+            label1.AutoSize = true;
+            label1.Font = new Font("Impact", 12F, FontStyle.Italic, GraphicsUnit.Point, 162);
+            label1.Location = new Point(13, 256);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 10;
             // 
             // lbl_hard
             // 
-            this.lbl_hard.AutoSize = true;
-            this.lbl_hard.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_hard.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lbl_hard.Location = new System.Drawing.Point(74, 276);
-            this.lbl_hard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_hard.Name = "lbl_hard";
-            this.lbl_hard.Size = new System.Drawing.Size(304, 20);
-            this.lbl_hard.TabIndex = 10;
-            this.lbl_hard.Text = "Pipe speed will increase each time you score!";
+            lbl_hard.AutoSize = true;
+            lbl_hard.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbl_hard.ForeColor = SystemColors.MenuText;
+            lbl_hard.Location = new Point(86, 318);
+            lbl_hard.Margin = new Padding(2, 0, 2, 0);
+            lbl_hard.Name = "lbl_hard";
+            lbl_hard.Size = new Size(304, 20);
+            lbl_hard.TabIndex = 10;
+            lbl_hard.Text = "Pipe speed will increase each time you score!";
             // 
             // lbl_medium
             // 
-            this.lbl_medium.AutoSize = true;
-            this.lbl_medium.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_medium.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lbl_medium.Location = new System.Drawing.Point(76, 185);
-            this.lbl_medium.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_medium.Name = "lbl_medium";
-            this.lbl_medium.Size = new System.Drawing.Size(152, 20);
-            this.lbl_medium.TabIndex = 10;
-            this.lbl_medium.Text = "Pipes will move faster";
+            lbl_medium.AutoSize = true;
+            lbl_medium.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbl_medium.ForeColor = SystemColors.MenuText;
+            lbl_medium.Location = new Point(89, 213);
+            lbl_medium.Margin = new Padding(2, 0, 2, 0);
+            lbl_medium.Name = "lbl_medium";
+            lbl_medium.Size = new Size(152, 20);
+            lbl_medium.TabIndex = 10;
+            lbl_medium.Text = "Pipes will move faster";
             // 
             // lbl_easy
             // 
-            this.lbl_easy.AutoSize = true;
-            this.lbl_easy.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_easy.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lbl_easy.Location = new System.Drawing.Point(74, 84);
-            this.lbl_easy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_easy.Name = "lbl_easy";
-            this.lbl_easy.Size = new System.Drawing.Size(153, 20);
-            this.lbl_easy.TabIndex = 10;
-            this.lbl_easy.Text = "Pipes will move slowly";
+            lbl_easy.AutoSize = true;
+            lbl_easy.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbl_easy.ForeColor = SystemColors.MenuText;
+            lbl_easy.Location = new Point(86, 97);
+            lbl_easy.Margin = new Padding(2, 0, 2, 0);
+            lbl_easy.Name = "lbl_easy";
+            lbl_easy.Size = new Size(153, 20);
+            lbl_easy.TabIndex = 10;
+            lbl_easy.Text = "Pipes will move slowly";
             // 
             // btn_hard
             // 
-            this.btn_hard.Location = new System.Drawing.Point(89, 208);
-            this.btn_hard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_hard.Name = "btn_hard";
-            this.btn_hard.Size = new System.Drawing.Size(115, 66);
-            this.btn_hard.TabIndex = 0;
-            this.btn_hard.Text = "Hard";
-            this.btn_hard.UseVisualStyleBackColor = true;
-            this.btn_hard.Click += new System.EventHandler(this.btn_hard_Click);
+            btn_hard.Location = new Point(104, 240);
+            btn_hard.Margin = new Padding(2);
+            btn_hard.Name = "btn_hard";
+            btn_hard.Size = new Size(134, 76);
+            btn_hard.TabIndex = 0;
+            btn_hard.Text = "Hard";
+            btn_hard.UseVisualStyleBackColor = true;
+            btn_hard.Click += btn_hard_Click;
             // 
             // btn_easy
             // 
-            this.btn_easy.Location = new System.Drawing.Point(89, 15);
-            this.btn_easy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_easy.Name = "btn_easy";
-            this.btn_easy.Size = new System.Drawing.Size(115, 66);
-            this.btn_easy.TabIndex = 0;
-            this.btn_easy.Text = "Easy";
-            this.btn_easy.UseVisualStyleBackColor = true;
-            this.btn_easy.Click += new System.EventHandler(this.btn_easy_Click);
+            btn_easy.Location = new Point(104, 17);
+            btn_easy.Margin = new Padding(2);
+            btn_easy.Name = "btn_easy";
+            btn_easy.Size = new Size(134, 76);
+            btn_easy.TabIndex = 0;
+            btn_easy.Text = "Easy";
+            btn_easy.UseVisualStyleBackColor = true;
+            btn_easy.Click += btn_easy_Click;
             // 
             // Entrance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(333, 492);
-            this.Controls.Add(this.panel_options);
-            this.Controls.Add(this.options);
-            this.Controls.Add(this.bird);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pipeup);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Entrance";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Entrance";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bird)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pipeup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.options)).EndInit();
-            this.panel_options.ResumeLayout(false);
-            this.panel_options.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(388, 568);
+            Controls.Add(panel_options);
+            Controls.Add(options);
+            Controls.Add(bird);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox3);
+            Controls.Add(pipeup);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(2);
+            MaximizeBox = false;
+            Name = "Entrance";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Entrance";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bird).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pipeup).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)options).EndInit();
+            panel_options.ResumeLayout(false);
+            panel_options.PerformLayout();
+            ResumeLayout(false);
 
         }
 

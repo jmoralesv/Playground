@@ -19,12 +19,14 @@ public partial class Entrance : Form
             panel_options.Hide();
         }
     }
+
     public Entrance()
     {
         InitializeComponent();
         lbl_hard.Text = "Pipe speed will increase\n each time you score!";
         Options();
     }
+
     private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
     {
         noButtonClicked();
