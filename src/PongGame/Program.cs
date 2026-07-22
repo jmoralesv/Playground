@@ -16,6 +16,7 @@ internal static class Program
         // This feature is experimental in .NET 9: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/whats-new/net90#dark-mode
         Application.SetColorMode(SystemColorMode.Classic);
 
-        Application.Run(new Form1());
+        using var form = new Form1();
+        Application.Run(form);
     }
 }

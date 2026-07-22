@@ -85,72 +85,42 @@ public partial class Form1 : Form
 
     private void WinGame()
     {
-        //horizontal winner check
-        if (A1.Text == A2.Text && A2.Text == A3.Text && A1.Text != "")
-        {
-            disableAI = false;
-            isThereAWinner = true;
-        }
-        if (B1.Text == B2.Text && B2.Text == B3.Text && B1.Text != "")
-        {
-            disableAI = false;
-            isThereAWinner = true;
-        }
-        if (C1.Text == C2.Text && C2.Text == C3.Text && C1.Text != "")
-        {
-            disableAI = false;
-            isThereAWinner = true;
-        }
-
-        //diagonal winner check
-
-        if (A1.Text == B2.Text && B2.Text == C3.Text && A1.Text != "")
-        {
-            disableAI = false;
-            isThereAWinner = true;
-        }
-        if (A3.Text == B2.Text && B2.Text == C1.Text && A3.Text != "")
-        {
-            disableAI = false;
-            isThereAWinner = true;
-        }
-        //vertical winner check
-        if (A1.Text == B1.Text && B1.Text == C1.Text && A1.Text != "")
-        {
-            disableAI = false;
-            isThereAWinner = true;
-        }
-        if (A2.Text == B2.Text && B2.Text == C2.Text && A2.Text != "")
-        {
-            disableAI = false;
-            isThereAWinner = true;
-        }
-        if (A3.Text == B3.Text && B3.Text == C3.Text && A3.Text != "")
-        {
-            disableAI = false;
-            isThereAWinner = true;
-        }
-
+        isThereAWinner = HasWinner();
         if (isThereAWinner)
         {
-            if (!turn && buttonPlayFriend.Checked)
-            {
-                MessageBox.Show("X won the game!", "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (isThereAWinner && turn && buttonPlayFriend.Checked)
-            {
-                MessageBox.Show("O won the game!", "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (isThereAWinner && !turn && buttonPlayAI.Checked)
-            {
-                MessageBox.Show("You won the game!", "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (isThereAWinner && turn && buttonPlayAI.Checked)
-            {
-                MessageBox.Show("AI won the game!", "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            disableAI = false;
+            ShowWinnerMessage();
             Restart();
         }
+    }
+
+    private bool HasWinner()
+    {
+        return IsWinningLine(A1, A2, A3)
+            || IsWinningLine(B1, B2, B3)
+            || IsWinningLine(C1, C2, C3)
+            || IsWinningLine(A1, B2, C3)
+            || IsWinningLine(A3, B2, C1)
+            || IsWinningLine(A1, B1, C1)
+            || IsWinningLine(A2, B2, C2)
+            || IsWinningLine(A3, B3, C3);
+    }
+
+    private static bool IsWinningLine(Button first, Button second, Button third)
+    {
+        return first.Text == second.Text && second.Text == third.Text && first.Text != "";
+    }
+
+    private void ShowWinnerMessage()
+    {
+        string message = (buttonPlayFriend.Checked, turn) switch
+        {
+            (true, false) => "X won the game!",
+            (true, true) => "O won the game!",
+            (false, false) => "You won the game!",
+            (false, true) => "AI won the game!",
+        };
+        MessageBox.Show(message, "Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 
     private void Draw() //draw situation
