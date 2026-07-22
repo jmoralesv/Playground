@@ -166,7 +166,7 @@ dotnet_diagnostic.CA1868.severity = warning # CA1868: Unnecessary call to 'Conta
 dotnet_diagnostic.CA1869.severity = error # CA1869: Cache and reuse 'JsonSerializerOptions' instances
 
 # Reliability rules
-dotnet_diagnostic.CA2000.severity = warning # CA2000: Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = suggestion # CA2000: Dispose objects before losing scope
 
 # Security rules
 dotnet_diagnostic.CA2119.severity = error # CA2119: Seal methods that satisfy private interfaces

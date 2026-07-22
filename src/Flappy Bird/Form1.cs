@@ -2,70 +2,54 @@
 
 public partial class Form1 : Form
 {
-    private readonly Entrance entrance = new();
-    private readonly Random random = new();
+    private readonly Entrance _entrance = new();
+    private readonly Random _random = new();
 
     public Form1()
     {
         InitializeComponent();
     }
 
-    private int gravity;
-    private int pipeSpeed = Entrance.EntrancePipeSpeed;
-    private int score;
-    private int pipeSpeedRate = Entrance.EntrancePipeRate;
+    private int _gravity;
+    private int _pipeSpeed = Entrance.EntrancePipeSpeed;
+    private int _score;
+    private int _pipeSpeedRate = Entrance.EntrancePipeRate;
 
     public void startGame()
     {
         panel_gameEnd.Hide();
-        score = 0;
+        _score = 0;
         bird.Left = 62;
         bird.Top = 146;
         pipedown.Top = -135;
         pipeup.Top = 239;
         pipedown.Left = 251;
         pipeup.Left = 251;
-        pipeSpeed = 3;
+        _pipeSpeed = 3;
         bird.Show();
-    }
-    private void pictureBox1_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void pictureBox1_Paint(object sender, PaintEventArgs e)
-    {
-
-
-
-    }
-
-    private void pictureBox1_Click_1(object sender, EventArgs e)
-    {
-
     }
 
     private void timer1_Tick(object sender, EventArgs e)
     {
-        bird.Top = gravity + bird.Top;
-        pipedown.Left = pipedown.Left - pipeSpeed;
-        pipeup.Left = pipeup.Left - pipeSpeed;
+        bird.Top = _gravity + bird.Top;
+        pipedown.Left = pipedown.Left - _pipeSpeed;
+        pipeup.Left = pipeup.Left - _pipeSpeed;
         if (pipedown.Left < 0)
         {
             pipedown.Left = 500;
-            pipedown.Top = random.Next(-150, -100);
-            score++;
+            pipedown.Top = _random.Next(-150, -100);
+            _score++;
 
         }
         if (pipeup.Left < 0)
         {
-            pipeup.Left = random.Next(450, 500);
-            pipeup.Top = random.Next(220, 350);
+            pipeup.Left = _random.Next(450, 500);
+            pipeup.Top = _random.Next(220, 350);
 
-            score++;
-            pipeSpeed = pipeSpeed + pipeSpeedRate;
+            _score++;
+            _pipeSpeed = _pipeSpeed + _pipeSpeedRate;
         }
-        lbl_scoreAmount.Text = score.ToString();
+        lbl_scoreAmount.Text = _score.ToString();
         gameOver();
     }
 
@@ -76,10 +60,8 @@ public partial class Form1 : Form
         {
             timer1.Enabled = false;
             bird.Hide();
-            lbl_gameEndScore.Text = "Score: " + score;
+            lbl_gameEndScore.Text = "Score: " + _score;
             panel_gameEnd.Show();
-
-
         }
     }
 
@@ -88,7 +70,7 @@ public partial class Form1 : Form
         if (e.KeyCode == Keys.Space)
         {
             timer1.Enabled = true;
-            gravity = -5;
+            _gravity = -5;
         }
     }
 
@@ -99,17 +81,15 @@ public partial class Form1 : Form
 
     private void Form1_KeyUp(object sender, KeyEventArgs e)
     {
-        gravity = +5;
+        _gravity = +5;
     }
 
     private void pictureBox1_Click_2(object sender, EventArgs e)
     {
-
     }
 
     private void panel_gameEnd_Paint(object sender, PaintEventArgs e)
     {
-
     }
 
     private void playAgainButton_Click(object sender, EventArgs e)
@@ -120,19 +100,19 @@ public partial class Form1 : Form
     private void pictureBox2_Click(object sender, EventArgs e)
     {
         this.Close();
-        entrance.Close();
+        _entrance.Close();
     }
 
     private void pictureBox3_Click(object sender, EventArgs e)
     {
         this.Hide();
-        entrance.Show();
+        _entrance.Show();
     }
 
     private void pictureBox1_Click_3(object sender, EventArgs e)
     {
-
     }
+
     private void Form1_FormClosed(object sender, FormClosedEventArgs e)
     {
         Application.Exit();
